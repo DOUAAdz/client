@@ -1,0 +1,171 @@
+/* Importation des polices */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Permanent+Marker&display=swap');
+
+/* Police personnalisée "Cherlotte" */
+@font-face {
+    font-family: 'Cherlotte';
+    src: url('fonts/Cherlotte.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Styles globaux */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: url('big.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: auto;
+}
+
+/* Conteneur principal */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 850px;
+    animation: fadeIn 1s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+/* Titre principal */
+h2 {
+    text-align: center;
+    font-family: 'Permanent Marker', cursive;
+    font-style: italic;
+    font-weight: 700;
+    color: black;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 28px;
+}
+
+/* Style des plats */
+.plats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.plat {
+    width: 270px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.plat:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Image du plat */
+.plat img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Nom du plat */
+h3 {
+    font-family: 'Cherlotte', serif;
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+    text-transform: capitalize;
+}
+
+/* Description et prix */
+p {
+    font-style: italic;
+    font-weight: 600;
+    color: black;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Bouton Commander */
+.commande-btn {
+    display: inline-block;
+    padding: 12px 18px;
+    margin-top: 12px;
+    background: black;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.commande-btn:hover {
+    background: #333;
+    transform: scale(1.05);
+}
+
+.commande-btn:active {
+    transform: scale(0.95);
+}
+
+/* Animation FadeIn */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Message de succès */
+.success-msg {
+    color: rgb(4, 12, 4);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+@font-face {
+    font-family: 'Cherlotte';
+    src: url('fonts/Cherlotte.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* Style pour l'icône du panier */
+.panier {
+    position: fixed; /* Positionnement fixe */
+    top: 20px; /* Position en haut */
+    right: 20px; /* Position à droite */
+    font-size: 24px; /* Taille de l'icône */
+}
+
+/* Style pour le badge (nombre d'articles) */
+.badge {
+    position: absolute; /* Position absolue par rapport à l'icône */
+    top: -5px; /* Décalage vertical */
+    right: -5px; /* Décalage horizontal */
+    background-color: red; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    padding: 5px 10px; /* Espacement autour du texte */
+    border-radius: 50%; /* Forme ronde */
+    font-size: 14px; /* Taille du texte */
+}
+
+/* Style pour l'icône de panier lorsqu'elle est survolée */
+.panier a:hover {
+    color: #ff5733; /* Changer la couleur au survol */
+}
